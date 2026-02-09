@@ -8,7 +8,8 @@ class MLPlay:
         Generate the command according to the received scene information
         """
         # print("AI received data from game :", json.dumps(scene_info))
-        # print(scene_info)
+        # print(args)
+        # print(kwargs)
         actions = ["UP", "DOWN", "LEFT", "RIGHT"]
 
         return random.sample(actions, 1)

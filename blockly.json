@@ -2,9 +2,12 @@
         ["ai_name", "name of ai", "AI編號"]
     ],
     "GAME_STATUS": [
-        ["GAME_ALIVE", "alive", "存活"],
+        ["GAME_ALIVE", "alive", "進行中"],
         ["GAME_PASS", "pass", "通關"],
-        ["GAME_OVER", "over", "失敗"]
+        ["GAME_OVER", "over", "結束"],
+        ["GAME_1P_WIN", "1P win", "1P 獲勝"],
+        ["GAME_2P_WIN", "2P win", "2P 獲勝"],
+        ["GAME_DRAW", "draw", "平手"]
     ],
     "SCENE_INFO": [
         ["scene_info['frame']", "# frame", "# 幀數"],
@@ -15,6 +18,12 @@
         ["scene_info['self_h']", "height of squid", "玩家角色的高度"],
         ["scene_info['self_lv']", "level of squid", "玩家角色的等級"],
         ["scene_info['self_vel']", "velocity of squid", "玩家角色的速度"],
+        ["scene_info['opponent_x']", "x coordinate of opponent squid", "對手角色的中心 x 座標"],
+        ["scene_info['opponent_y']", "y coordinate of opponent squid", "對手角色的中心 y 座標"],
+        ["scene_info['opponent_lv']", "level of opponent squid", "對手角色的等級"],
+        ["scene_info['opponent_w']", "width of opponent squid", "對手角色的寬度"],
+        ["scene_info['opponent_h']", "height of opponent squid", "對手角色的高度"],
+        ["scene_info['opponent_vel']", "velocity of opponent squid", "對手角色的速度"],
         ["scene_info['score']", "score", "目前的分數"],
         ["scene_info['foods']", "list of foods positions", "所有食物的位置清單"],
         ["scene_info['score_to_pass']", "the score for next level", "通關分數"],
@@ -30,9 +39,11 @@
     ],
     "CONSTANT": [
 
-        [30, "food lv1 size", "等級一食物的寬高度"],
+        [30, "food lv1 size", "等級一食物的高度"],
         [40, "food lv2 size", "等級二食物的高度"],
-        [50, "food lv3 size", "等級三食物的高度"]
+        [50, "food lv3 size", "等級三食物的高度"],
+        [350, "Playground center X ", "地圖中心點 X 座標"],
+        [300, "Playground center Y ", "地圖中心點 Y 座標"]
     ],
     "ACTION": [
         ["['UP']", "moving up", "向上移動"],
