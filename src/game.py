@@ -20,7 +20,7 @@ EXTRA_FRAME = 300
 EXTRA_POINT = 50
 
 
-class SwimmingSquidSingle(PaiaGame):
+class SwimmingSquid(PaiaGame):
     """
     This is a Interface of a game
     """

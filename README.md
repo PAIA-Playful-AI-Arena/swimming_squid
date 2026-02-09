@@ -1,6 +1,6 @@
-# **Swimming Squid Single** 魷來魷去單人版
+# **Swimming Squid** 魷來魷去單人版
 
-![swimming-squid-battle](https://img.shields.io/github/v/tag/PAIA-Playful-AI-Arena/swimming-squid-battle)
+![swimming-squid](https://img.shields.io/github/v/tag/PAIA-Playful-AI-Arena/swimming-squid)
 
 [![MLGame](https://img.shields.io/badge/MLGame->10.6.a9-<COLOR>.svg)](https://github.com/PAIA-Playful-AI-Arena/MLGame)
 
@@ -8,7 +8,7 @@
 這是一個魷魚吃東西小遊戲，廣闊的海洋中有美味的食物，也有人類拋棄的垃圾！
     請用你的 AI 幫助小小魷魚，在雜亂的海洋中順利長大。
 
-![demo](https://raw.githubusercontent.com/PAIA-Playful-AI-Arena/swimming_squid_battle/refs/tags/1.6.2/asset/banner.gif)
+![demo](https://hackmd.io/_uploads/Sy-pQMPPZg.gif)
 
 ---
 
