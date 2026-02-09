@@ -4,10 +4,7 @@
     "GAME_STATUS": [
         ["GAME_ALIVE", "alive", "進行中"],
         ["GAME_PASS", "pass", "通關"],
-        ["GAME_OVER", "over", "結束"],
-        ["GAME_1P_WIN", "1P win", "1P 獲勝"],
-        ["GAME_2P_WIN", "2P win", "2P 獲勝"],
-        ["GAME_DRAW", "draw", "平手"]
+        ["GAME_OVER", "over", "結束"]
     ],
     "SCENE_INFO": [
         ["scene_info['frame']", "# frame", "# 幀數"],

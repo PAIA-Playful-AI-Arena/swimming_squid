@@ -22,7 +22,7 @@
 
 ```python
 # main.py 
-game = SwimmingSquidBattle(
+game = SwimmingSquid(
             level: int = 1,
             level_file: str = None
 ```
@@ -132,10 +132,10 @@ class MLPlay:
   "self_lv": 1,
   "opponent_x":500,
   "opponent_y":400,
-  "opponent_lv": 2,
-  "opponent_w": 36,
-  "opponent_h": 72,
-  "opponent_vel": 21,
+  "opponent_lv": 1,
+  "opponent_w": 30,
+  "opponent_h": 60,
+  "opponent_vel": 30,
   "status": "GAME_ALIVE",
   "foods": [
     {
@@ -203,12 +203,12 @@ class MLPlay:
 - `self_h`：玩家角色的高度，單位 pixel。
 - `self_vel`：玩家角色的速度，表示方塊每幀移動的像素，單位 pixel。
 - `self_lv`：玩家角色的等級，最小 1 ，最大 6。
-- `opponent_x`：對手角色的Ｘ座標，表示方塊的`中心點`座標值，單位 pixel。
-- `opponent_y`：對手角色的Ｙ座標，表示方塊的`中心點`座標值，單位 pixel。
-- `opponent_lv`：對手角色的等級，最小 1 ，最大 6。
-- `opponent_w`：對手角色的寬度，單位 pixel。
-- `opponent_h`：對手角色的高度，單位 pixel。
-- `opponent_vel`：對手角色的速度，表示方塊每幀移動的像素，單位 pixel。
+- `opponent_x`：模擬對手角色的Ｘ座標，表示方塊的`中心點`座標值，單位 pixel。
+- `opponent_y`：模擬對手角色的Ｙ座標，表示方塊的`中心點`座標值，單位 pixel。
+- `opponent_lv`：模擬對手角色的等級，固定為 1。
+- `opponent_w`：模擬對手角色的寬度，固定為 30，單位 pixel。
+- `opponent_h`：模擬對手角色的高度，固定為 60，單位 pixel。
+- `opponent_vel`：模擬對手角色的速度，固定為 30，單位 pixel。
 - `foods`：食物的清單，清單內每一個物件都是一個食物的`中心點`座標值，也會提供此食物是什麼類型和分數多少。
   - `type` 食物類型： `FOOD_1`, `FOOD_2`, `FOOD_3`, `GARBAGE_1`, `GARBAGE_2`, `GARBAGE_3`
 - `score`：目前得到的分數

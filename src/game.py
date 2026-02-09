@@ -71,6 +71,7 @@ class SwimmingSquid(PaiaGame):
         self.current_state = self._state_map[RunningState.OPENING]
         self.ai_enabled=False
         self.group_ai_dict = {ai.ai_name:ai for ai in group_ai_list}
+        self.used_frame = 0
         
     def set_game_state(self, state: RunningState):
         
@@ -81,6 +82,11 @@ class SwimmingSquid(PaiaGame):
             self.current_state = None
         if state == RunningState.PLAYING:
             self._init_game()
+        if state == RunningState.ENDING:
+            self.used_frame = self.frame_count
+            self.frame_count = self._frame_limit
+            self._frame_limit += 90
+
     def _init_game_by_file(self, level_file_path: str):
         try:
             with open(level_file_path) as f:
@@ -189,7 +195,7 @@ class SwimmingSquid(PaiaGame):
             self._frame_count_down = self._frame_limit - self.frame_count
             # self.draw()
 
-            if not self.is_running:
+            if self.is_passed or self.time_out:
                 # 五戰三勝的情況下不能直接回傳，因此紀錄 winner 後，重啟遊戲
                 self.update_winner()
 
@@ -205,16 +211,16 @@ class SwimmingSquid(PaiaGame):
                 if self.squid1.score >= self._score_to_pass:  # pass
                     self._status = "GAME_PASS"
                     print("通關！")
+                    logger.info("通關！")
                 else:
                     self._status = "GAME_OVER"
                     print("時間到！")
+                    logger.info("時間到！")
                 self.set_game_state(RunningState.ENDING)
 
                 return "RESET"
             else:
                 self._status = GameStatus.GAME_ALIVE
-
-
 
         self.ai_enabled = bool(self._running_state == RunningState.PLAYING)
 
@@ -333,15 +339,16 @@ class SwimmingSquid(PaiaGame):
     @property
     def time_out(self):
         if self.frame_count >= self._frame_limit:
-            logger.info("時間到")
+            # logger.info("時間到")
             return True
         else:
             return False
 
     @property
     def is_running(self):
+        return (not self.time_out)
+        # return (not self.time_out) and (not self.is_passed)
 
-        return (not self.time_out) and (not self.is_passed)
 
     @check_scene_init_data
     def get_scene_init_data(self):
