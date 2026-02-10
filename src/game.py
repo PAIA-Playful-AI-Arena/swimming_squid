@@ -85,7 +85,7 @@ class SwimmingSquid(PaiaGame):
         if state == RunningState.ENDING:
             self.used_frame = self.frame_count
             self.frame_count = self._frame_limit
-            self._frame_limit += 90
+            self._frame_limit += 30
 
     def _init_game_by_file(self, level_file_path: str):
         try:
@@ -424,9 +424,9 @@ class SwimmingSquid(PaiaGame):
 
         result.extend(
             [
-                create_text_view_data(f"{self.group_ai_dict[AINameEnum.P1.value].ai_label}", (WIDTH/2-570), 10, "#EEEEEE", "20px Krungthep"),
-                create_text_view_data(f"Lv{self.squid1.lv}", WIDTH/2-500, dot_y, "#EEEEEE", "20px Krungthep"),
-                create_text_view_data(f"{self.squid1.score:03d}/{self._score_to_pass:03d}", (WIDTH/2-500)+30, 68, "#EEEEEE", "20px Krungthep"),
+                # create_text_view_data(f"{self.group_ai_dict[AINameEnum.P1.value].ai_label}", (WIDTH/2-570), 10, "#EEEEEE", "20px Krungthep BOLD"),
+                create_text_view_data(f"Lv{self.squid1.lv}", WIDTH/2-500, dot_y, "#EEEEEE", "20px Krungthep BOLD"),
+                create_text_view_data(f"{self.squid1.score:03d} / {self._score_to_pass:03d}", (WIDTH/2-500)+30, 65, "#EEEEEE", "24px Krungthep BOLD"),
 
             ]
         )
@@ -466,7 +466,7 @@ class SwimmingSquid(PaiaGame):
         foregrounds = [
             create_image_view_data("scorebar", (WIDTH-1000)/2, 0, 1000, 150),
 
-            create_text_view_data(f"{self._frame_count_down:04d}", WIDTH*2/3+84, 50, "#EEEEEE", "48px Krungthep"),
+            create_text_view_data(f"{self._frame_count_down:04d}", WIDTH*2/3+84, 38, "#EEEEEE", "48px Krungthep BOLD"),
             
         ]
         foregrounds.extend(self._p1_info)
