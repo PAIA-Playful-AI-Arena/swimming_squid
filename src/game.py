@@ -85,7 +85,7 @@ class SwimmingSquid(PaiaGame):
         if state == RunningState.ENDING:
             self.used_frame = self.frame_count
             self.frame_count = self._frame_limit
-            self._frame_limit += 90
+            self._frame_limit += 30
 
     def _init_game_by_file(self, level_file_path: str):
         try:
