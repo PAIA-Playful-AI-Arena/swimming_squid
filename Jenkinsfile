@@ -36,15 +36,15 @@ pipeline {
                 script {
                   sh "docker buildx ls"
                   if (branch == 'main' && env.tag) {
-                    sh """docker buildx build --builder=mybuilder --platform linux/amd64,linux/arm64 \
+                    sh """docker buildx build --builder=mybuilder --platform linux/amd64,linux/arm64  \
                       -t ${env.registry}/${game}:${env.tag} \
                       -t ${env.registry}/${game}:${env.branch} \
                       -f ./Dockerfile . --push
                       """
                   }else{
-                    sh """docker buildx build --builder=mybuilder --platform linux/amd64,linux/arm64 \
+                    sh """docker buildx build --builder=mybuilder --platform linux/amd64,linux/arm64  \
                       -t ${env.registry}/${game}:${env.branch} \
-                      -f ./Dockerfile . --push -q
+                      -f ./Dockerfile . --push
                     """
                   }
 
