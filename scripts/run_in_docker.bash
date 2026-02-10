@@ -1,5 +1,5 @@
 export tag="latest"
-export game="swimming_squid"
+export game="swimming_squid_battle"
 
 docker run -it --rm --name ${game} \
 -v ./ai/user-1/code-123:/game/ai/1P \
