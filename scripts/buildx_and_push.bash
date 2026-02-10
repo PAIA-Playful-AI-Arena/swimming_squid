@@ -1,4 +1,4 @@
-export tag="2.5.0b7"
+export tag="2.5.1"
 export game="swimming_squid"
 export pge_ver="PGE20250522"
 

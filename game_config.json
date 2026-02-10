@@ -1,11 +1,11 @@
 {
   "game_name": "swimming_squid",
-  "version": "1.7.0a1",
+  "version": "2.5.1",
   "url": "https://github.com/PAIA-Playful-AI-Arena/swimming_squid",
   "description": "這是一個魷魚吃東西小遊戲，你需要找到正確的食物、避開海中的垃圾，還要提防敵人的攻擊！（當然你也可以主動攻擊他人）",
   "logo": [
     "./asset/logo.png",
-    "https://raw.githubusercontent.com/PAIA-Playful-AI-Arena/swimming_squid_battle/1.6.4/asset/logo.png"
+    "https://raw.githubusercontent.com/PAIA-Playful-AI-Arena/swimming_squid/2.5.1/asset/logo.png"
   ],
   "user_num": {
     "min": 1,

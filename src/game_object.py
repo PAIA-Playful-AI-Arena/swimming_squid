@@ -277,7 +277,7 @@ class ScoreText(pygame.sprite.Sprite):
     def game_object_data(self):
         return create_text_view_data(
             self._text, self.rect.centerx, self.rect.centery, self._color,
-            "24px Arial BOLD")
+            "24px Krungthep BOLD")
 
 class ForegroundText(pygame.sprite.Sprite):
     def __init__(self, text, color, x, y, groups):

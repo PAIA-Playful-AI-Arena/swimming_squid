@@ -52,7 +52,6 @@ game = SwimmingSquid(
 
 ### 得分 / 扣分規則
 
-1. 吃東西：
    1. 角色可以透過吃海裡漂浮的東西獲取分數，但海裡也有垃圾存在，吃到垃圾將會扣分。
    2. 不同的食物 / 垃圾會有不同的大小與分數。資料如下：
 
@@ -118,83 +117,82 @@ class MLPlay:
 ## 遊戲資訊
 
 - scene_info 的資料格式如下
-
-```json
-{
-  "frame": 15,
-  "score": 8,
-  "score_to_pass": 10,
-  "self_x": 100,
-  "self_y": 300,
-  "self_w": 30,
-  "self_h": 45,
-  "self_vel": 25,
-  "self_lv": 1,
-  "opponent_x":500,
-  "opponent_y":400,
-  "opponent_lv": 1,
-  "opponent_w": 30,
-  "opponent_h": 60,
-  "opponent_vel": 30,
-  "status": "GAME_ALIVE",
-  "foods": [
-    {
-      "h": 30,
-      "score": 1,
-      "type": "FOOD_1",
-      "w": 30,
-      "x": 40,
-      "y": 134
-    },
-    {
-      "h": 40,
-      "score": 2,
-      "type": "FOOD_2",
-      "w": 40,
-      "x": 422,
-      "y": 192
-    },
-    {
-      "h": 50,
-      "score": 4,
-      "type": "FOOD_3",
-      "w": 50,
-      "x": 264,
-      "y": 476
-    },
-    {
-      "h": 30,
-      "score": -1,
-      "type": "GARBAGE_1",
-      "w": 30,
-      "x": 100,
-      "y": 496
-    },
-    {
-      "h": 40,
-      "score": -4,
-      "type": "GARBAGE_2",
-      "w": 40,
-      "x": 633,
-      "y": 432
-    },
-    {
-      "h": 50,
-      "score": -10,
-      "type": "GARBAGE_3",
-      "w": 50,
-      "x": 54,
-      "y": 194
+  ```json
+  {
+    "frame": 15,
+    "score": 8,
+    "score_to_pass": 10,
+    "self_x": 100,
+    "self_y": 300,
+    "self_w": 30,
+    "self_h": 45,
+    "self_vel": 25,
+    "self_lv": 1,
+    "opponent_x":500,
+    "opponent_y":400,
+    "opponent_lv": 1,
+    "opponent_w": 30,
+    "opponent_h": 60,
+    "opponent_vel": 30,
+    "status": "GAME_ALIVE",
+    "foods": [
+      {
+        "h": 30,
+        "score": 1,
+        "type": "FOOD_1",
+        "w": 30,
+        "x": 40,
+        "y": 134
+      },
+      {
+        "h": 40,
+        "score": 2,
+        "type": "FOOD_2",
+        "w": 40,
+        "x": 422,
+        "y": 192
+      },
+      {
+        "h": 50,
+        "score": 4,
+        "type": "FOOD_3",
+        "w": 50,
+        "x": 264,
+        "y": 476
+      },
+      {
+        "h": 30,
+        "score": -1,
+        "type": "GARBAGE_1",
+        "w": 30,
+        "x": 100,
+        "y": 496
+      },
+      {
+        "h": 40,
+        "score": -4,
+        "type": "GARBAGE_2",
+        "w": 40,
+        "x": 633,
+        "y": 432
+      },
+      {
+        "h": 50,
+        "score": -10,
+        "type": "GARBAGE_3",
+        "w": 50,
+        "x": 54,
+        "y": 194
+      }
+    ] ,
+    "env": {
+      "time_to_play": 600,
+      "playground_size_w":700, 
+      "playground_size_h":550
     }
-  ] ,
-  "env": {
-    "time_to_play": 600,
-    "playground_size_w":700, 
-    "playground_size_h":550
-  }
 
-}
-```
+  }
+  ```
 
 - `frame`：遊戲畫面更新的編號。
 - `self_x`：玩家角色的Ｘ座標，表示方塊的`中心點`座標值，單位 pixel。
