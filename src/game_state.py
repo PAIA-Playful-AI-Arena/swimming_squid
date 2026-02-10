@@ -42,8 +42,8 @@ class EndingState(GameState):
             object_list.extend([create_image_view_data(IMG_ID_CLEAR, 0, 0, 1280, 768)])
         else:
             object_list.extend([create_image_view_data(IMG_ID_FAILED, 0, 0, 1280, 768)])
-        object_list.extend([create_text_view_data(f"Time : {self._game.used_frame:04d}", WIDTH/2-100, HEIGHT/2, "#EEEEEE", "60px Krungthep"),
-                            create_text_view_data(f"Score : {self._p1_score:03d} / {self._pass_score:03d}", WIDTH/2-100, HEIGHT/2+120, "#EEEEEE", "60px Krungthep")])
+        object_list.extend([create_text_view_data(f"Time : {self._game.used_frame:04d}", WIDTH/2-100, HEIGHT/2 -60, "#EEEEEE", "60px Krungthep"),
+                            create_text_view_data(f"Score : {self._p1_score:03d} / {self._pass_score:03d}", WIDTH/2-100, HEIGHT/2+60, "#EEEEEE", "60px Krungthep")])
 
         
         
