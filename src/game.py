@@ -217,8 +217,8 @@ class SwimmingSquid(PaiaGame):
                     print("時間到！")
                     logger.info("時間到！")
                 self.set_game_state(RunningState.ENDING)
-
-                return "RESET"
+                if self.time_out:
+                    return "RESET"
             else:
                 self._status = GameStatus.GAME_ALIVE
 
