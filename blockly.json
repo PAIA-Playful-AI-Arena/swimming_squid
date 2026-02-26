@@ -22,7 +22,7 @@
         ["scene_info['opponent_h']", "height of opponent squid", "對手角色的高度"],
         ["scene_info['opponent_vel']", "velocity of opponent squid", "對手角色的速度"],
         ["scene_info['score']", "score", "目前的分數"],
-        ["scene_info['foods']", "list of foods positions", "所有食物的位置清單"],
+        ["scene_info['foods']", "list of foods positions", "所有食物資訊清單"],
         ["scene_info['score_to_pass']", "the score for next level", "通關分數"],
         ["scene_info['env']", "the env of map", "地圖環境資訊"],
         ["scene_info['env']['playground_size_w']", "the width of playground", "環境寬度"],
