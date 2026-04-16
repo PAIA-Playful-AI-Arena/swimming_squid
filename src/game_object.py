@@ -298,7 +298,7 @@ class ForegroundText(pygame.sprite.Sprite):
     def game_object_data(self):
         return create_text_view_data(
             self._text, self.rect.centerx, self.rect.centery, self._color,
-            "32px burnfont")
+            "32px Krungthep")
 
 
 class CryingStar(pygame.sprite.Sprite):
