@@ -8,7 +8,7 @@
 這是一個魷魚吃東西小遊戲，廣闊的海洋中有美味的食物，也有人類拋棄的垃圾！
     請用你的 AI 幫助小小魷魚，在雜亂的海洋中順利長大。
 
-![demo](https://hackmd.io/_uploads/Sy-pQMPPZg.gif)
+![demo](./asset/banner.gif)
 
 ---
 
